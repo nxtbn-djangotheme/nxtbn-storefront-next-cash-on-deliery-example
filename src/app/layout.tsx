@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SiteHeader } from "@/components/site-header";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,8 +30,9 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <SiteHeader />
-            <div className="overflow-x-hidden mx-20">{children}</div>
+            <div className="overflow-x-hidden mx-5 md:mx-10 lg:mx-20">{children}</div>
           </ThemeProvider>
+          <ToastContainer />
         </body>
       </html>
     </>

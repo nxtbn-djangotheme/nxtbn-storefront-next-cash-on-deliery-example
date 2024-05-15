@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { UserNav } from "./user-nav";
 import { Input } from "@/components/ui/input";
 import { MobileNav } from "./mobile-nav";
+import CartIcon from "./cart-icon";
 
 export function SiteHeader() {
   return (
@@ -18,23 +19,7 @@ export function SiteHeader() {
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
           <Input type="text" placeholder="Search..." className="hidden md:block" />
-            <Link href={siteConfig.links.cart}>
-              <div
-                className={cn(
-                  buttonVariants({
-                    size: "icon",
-                    variant: "ghost",
-                  }),
-                  "relative"
-                )}
-              >
-                <BaggageClaim strokeWidth={1.7} />
-                <span className="sr-only">Cart</span>
-                <span className="absolute top-[-5px] right-[-5px] bg-slate-700 dark:bg-slate-200 dark:text-black text-white py-[1px] px-[3px] rounded-full">
-                  0
-                </span>
-              </div>
-            </Link>
+            <CartIcon />
             <Link
               href={siteConfig.links.github}
               target="_blank"
