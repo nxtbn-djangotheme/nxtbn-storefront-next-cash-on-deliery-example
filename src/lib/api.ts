@@ -33,7 +33,7 @@ const useApiHelper = () => {
       const { payment_method, ...newData } = data;
 
       return axios.post(
-        `/order/storefront/api/anonymous-user-order-create/${payment_method}/`,
+        `/order/storefront/api/guest-user-order-create/${payment_method}/`,
         newData,
         { params: params }
       );

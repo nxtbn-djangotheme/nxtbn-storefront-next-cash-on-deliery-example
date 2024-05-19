@@ -506,7 +506,7 @@ function AddressForm() {
                 </FormControl>
                 <SelectContent>
                   <SelectItem value="cod">Cash on Delivery</SelectItem>
-                  <SelectItem value="stripe">Stripe</SelectItem>
+                  <SelectItem value="stripe_payment_link">Stripe</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
